@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# Detect the name of the connected display
+output=$(xrandr | grep " connected" | awk '{print $1}')
+
+# Find the recommended resolution (marked with '+')
+resolution=$(xrandr | grep -A10 "^$output connected" | grep -E '\+[^0-9]*$|\+\s' | awk '{print $1}' | head -n 1)
+
+# Apply the resolution if both values are present
+if [[ -n "$output" && -n "$resolution" ]]; then
+    xrandr --output "$output" --mode "$resolution"
+else
+    echo "Error: Could not detect a recommended display resolution."
+    exit 1
+fi

@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Auto-adjust Resolution
+Comment=Automatically adjusts display resolution
+Exec=/usr/bin/set-recommended-resolution
+Terminal=false
+Type=Application
+Icon=computer

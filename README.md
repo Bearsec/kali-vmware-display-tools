@@ -26,13 +26,13 @@ git clone https://github.com/Bearsec/kali-vmware-display-tools.git
 ```bash
 cp kali-vmware-display-tools/*.desktop ~/Desktop
 sudo cp kali-vmware-display-tools/set-recommended-resolution /usr/bin/
-chmod +x /usr/bin/set-recommended-resolution
+sudo chmod +x /usr/bin/set-recommended-resolution
 ```
 
 3. Make desktop launchers executable:
 
 ```bash
-chmod +x ~Desktop/*.desktop
+chmod +x ~/Desktop/*.desktop
 ```
 
 4. (Optional) Reload the desktop:
@@ -47,7 +47,8 @@ xfdesktop --reload
 - Place these `.desktop` launchers on the desktop for one-click access.
 - Designed for XFCE in Kali; may require tweaks in other environments.
 
-## 📷 Screenshot
+## 📽 Demo
 
-> *(Add screenshot of desktop with icons, optional)*
+[![Display Tools Demo](assets/demo.gif)](https://github.com/Bearsec/kali-vmware-display-tools)
+
 
